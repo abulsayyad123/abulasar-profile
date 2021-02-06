@@ -2593,6 +2593,12 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
+		.tags {
+			color:white;
+			padding-right: 5px;
+			cursor:pointer;
+		}
+
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;

@@ -4,6 +4,10 @@
       <h1 class="major">{{@model.title}}</h1>
       <span class="image fit"><img src={{@model.coverImage}} alt="" /></span>
       {{{@model.content}}}
+
+      {{#each @model.tags as |tag|}}
+        <span class="tags">#{{tag.name}},</span>
+      {{/each}}
     </div>
   </section>
 </div>

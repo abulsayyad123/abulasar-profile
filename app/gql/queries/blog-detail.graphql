@@ -6,6 +6,9 @@ query($slug: String!) {
     cuid,
     coverImage,
     content,
-    contentMarkdown
+    contentMarkdown,
+    tags {
+      name
+    }
   }
 }
