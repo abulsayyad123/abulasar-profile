@@ -10,4 +10,8 @@ export default class BlogsDetailsRoute extends Route {
     const content = await this.apollo.watchQuery({ query, variables }, "post");
     return content;
   }
+
+  afterModel() {
+    window.scrollTo(0, 0);
+  }
 }
