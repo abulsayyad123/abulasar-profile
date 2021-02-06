@@ -8,7 +8,7 @@
       <h2>{{@post.title}}</h2>
       <p>{{@post.brief}}</p>
       <ul class="actions">
-        <li><a href="generic.html" class="button">Learn more</a></li>
+        <li><LinkTo @route="blogs.details" @model={{@post.slug}} class="button">Learn more</LinkTo></li>
       </ul>
     </div>
   </div>

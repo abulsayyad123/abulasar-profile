@@ -1,0 +1,11 @@
+# Write your query or mutation here
+query($slug: String!) {
+  post(slug: $slug, hostname:"abulasar") {
+    title,
+    slug,
+    cuid,
+    coverImage,
+    content,
+    contentMarkdown
+  }
+}
