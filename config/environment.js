@@ -17,6 +17,10 @@ module.exports = function (environment) {
       },
     },
 
+    apollo: {
+      apiURL: 'https://api.hashnode.com/'
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

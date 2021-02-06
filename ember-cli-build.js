@@ -6,6 +6,9 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     minifyCSS: {
       options: { processImport: true }
+    },
+    'ember-fetch': {
+      preferNative: true
     }
   });
 

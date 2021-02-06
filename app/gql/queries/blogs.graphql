@@ -1,0 +1,13 @@
+query{
+  user(username:"abulasar") {
+    publication {
+      posts(page:0) {
+        title
+        brief
+        slug
+        cuid
+        coverImage
+      }
+    }
+  }
+}
