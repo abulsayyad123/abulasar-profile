@@ -1,12 +1,15 @@
 import Route from '@ember/routing/route';
-import { queryManager } from "ember-apollo-client";
-import query from "abulasar-profile/gql/queries/blogs.graphql";
-
+import { inject as service } from '@ember/service';
 export default class BlogsIndexRoute extends Route {
-  @queryManager apollo;
+  @service blogPost;
 
   async model() {
-    const result = await this.apollo.watchQuery({ query }, "user");
-    return result.publication.posts;
+    const pagination = { page: 0 }
+    const result = await this.blogPost.fetchPosts(pagination);
+    return result;
+  }
+
+  setupController(controller) {
+    controller.set("showSpinner", false);
   }
 }

@@ -1,13 +1,11 @@
 import Route from '@ember/routing/route';
-import { queryManager } from "ember-apollo-client";
-import query from "abulasar-profile/gql/queries/blog-detail.graphql";
-
+import { inject as service } from '@ember/service';
 export default class BlogsDetailsRoute extends Route {
-  @queryManager apollo;
+  @service blogPost;
 
   async model({slug}) {
-    let variables = { slug }
-    const content = await this.apollo.watchQuery({ query, variables }, "post");
+    const params = { slug }
+    const content = await this.blogPost.getPost(params);
     return content;
   }
 

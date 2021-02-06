@@ -2599,6 +2599,11 @@ input, select, textarea {
 			cursor:pointer;
 		}
 
+		.loading-button {
+			margin-left: 45%;
+			margin-bottom: 15px;
+		}
+
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;

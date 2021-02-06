@@ -2,4 +2,9 @@
   {{#each @model as |post|}}
       <PostCardView @post={{post}} />
   {{/each}}
+
+  <button {{on 'click' this.loadMore}} class="button" class="loading-button">Load more &#8595;</button>
+  {{#if this.showSpinner}}
+    <LoadingSpinner />
+  {{/if}}  
 </section>

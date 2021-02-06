@@ -1,7 +1,7 @@
-query{
+query($page: Int!){
   user(username:"abulasar") {
     publication {
-      posts(page:0) {
+      posts(page: $page) {
         title
         brief
         slug
